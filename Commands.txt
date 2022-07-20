@@ -1,0 +1,12 @@
+
+near call dojos.near storage_deposit {} --accountId=stake.dojos.near --deposit=0.00125
+
+near view dojos.near ft_balance_of {\"account_id\":\"stake.dojos.near\"}
+
+near call dojos.near ft_transfer {\"receiver_id\":\"stakein.near\",\"amount\":\"2000000000000000000\"} --accountId=dojos.near --depositYocto=1
+
+near call kaizofighters.tenk.near nft_transfer "{\"receiver_id\":\"nicecolours.near\",\"token_id\":\"3744\"}" --accountId=stake.dojos.near --depositYocto=1
+
+near view stake.dojos.near get_amount_by_owner "{\"account_id\":\"cc303d02c7a9abcea34d2e84e50fb7a48aece0026297f0d2dceb22646cde08ca\"}"
+
+near call stake.dojos.near fix "{\"account_id\":\"cc303d02c7a9abcea34d2e84e50fb7a48aece0026297f0d2dceb22646cde08ca\"}"
